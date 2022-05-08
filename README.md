@@ -1,15 +1,15 @@
 - [Elastic Stack - ELK](#elastic-stack---elk)
   - [Herramientas que forman elastic Stack](#herramientas-que-forman-elastic-stack)
     - [Kibana](#kibana)
-    - [> Elasticsearch](#-elasticsearch)
-    - [> Logstash](#-logstash)
-    - [> Beats](#-beats)
+    - [Elasticsearch](#elasticsearch)
+    - [Logstash](#logstash)
+    - [Beats](#beats)
   - [Instalación del stack](#instalación-del-stack)
-    - [> Logstash](#-logstash-1)
-    - [> BEATS](#-beats-1)
-  - [#### USANDO `apt` (INSTALACIÓN EN NUESTRO SISTEMA)](#-usando-apt-instalación-en-nuestro-sistema)
-  - [#### BAJANDO EL .TAR.GZ - LA MÁS SENCILLA](#-bajando-el-targz---la-más-sencilla)
-  - [#### DOCKER](#-docker)
+    - [Logstash](#logstash-1)
+    - [BEATS](#beats-1)
+      - [USANDO `apt` (INSTALACIÓN EN NUESTRO SISTEMA)](#usando-apt-instalación-en-nuestro-sistema)
+      - [BAJANDO EL .TAR.GZ - LA MÁS SENCILLA](#bajando-el-targz---la-más-sencilla)
+      - [DOCKER](#docker)
 
 # Elastic Stack - ELK
 
@@ -23,15 +23,15 @@ Es un conjunto de herramientas centradas en la monitorización y analítica de l
 
 Herramienta de monitorización y visualización/explotación de información. Nos permite construir dashboards. 
 
-### > Elasticsearch 
+### Elasticsearch 
 
 Motor de búsqueda e indexación para localizar datos (almacenamiento de los datos). En el momento de almacenar esa info la indexa y por lo tanto la tiene que procesar de un cierto modo.
 
-### > Logstash 
+### Logstash 
 
 Herramienta centrada en la gestión y tratamiento de logs. 
 
-### > Beats
+### Beats
 
 Para recolección de información como: 
 
@@ -43,7 +43,7 @@ Para recolección de información como:
 
 ## Instalación del stack 
 
-### > Logstash
+### Logstash
 
 Para que esta herramienta funcione correctamente debemos tener instalado JAVA. 
 
@@ -53,7 +53,7 @@ export JAVA_HOME=/usr/lib/jvm/java-16-openjdk-amd64
 export PATH=/usr/lib/jvm/java-16-openjdk-amd64/bin:${PATH}
 ```
 
-### > BEATS
+### BEATS
 
 Es un conjunto de herramientas que se instalan en un host y envian información a un destino concreto que suele ser logstash o elasticsearch. Oficialmente se ofrecen 6 beats: 
 
@@ -69,9 +69,9 @@ Procederemos a la instalación de uno en concreto ya que el resto se instalan ig
 
 Vamos a instalar metricbeat, para ello debemos descargarlo del sitio oficial. Hay varias maneras de instalarlo:
 
----
+
 #### USANDO `apt` (INSTALACIÓN EN NUESTRO SISTEMA)
----
+
 
 source : https://www.elastic.co/guide/en/beats/metricbeat/8.1/setup-repositories.html#_apt
 
@@ -131,9 +131,9 @@ Finalmente para ejecutar el beat tenemos arrancar el ejecutable y pasarle el arc
 ```
 sudo /usr/share/metricbeat/bin/metricbeat -e -c /etc/metricbeat/metricbeat.yml
 ```
----
+
 #### BAJANDO EL .TAR.GZ - LA MÁS SENCILLA
----
+
 source: https://www.elastic.co/es/downloads/past-releases#metricbeat
 
 Para podernos bajar el comprimido debemos ir a la sección de past-release, aquí nos podremos bajar el beat todo en un mismo directorio 
@@ -145,9 +145,8 @@ hacenos los cambios en el archivo de config y lo arrancamos
 ```
 ./metricbeat -c metricbeat.yml
 ```
----
+
 #### DOCKER
----
 
 ```
 docker pull docker.elastic.co/beats/metricbeat:8.1.3
