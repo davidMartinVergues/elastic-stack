@@ -7,7 +7,7 @@
   - [Instalación del stack](#instalación-del-stack)
     - [Logstash](#logstash-1)
     - [BEATS](#beats-1)
-      - [USANDO `apt` (INSTALACIÓN EN NUESTRO SISTEMA)](#usando-apt-instalación-en-nuestro-sistema)
+      - [* USANDO `apt` (INSTALACIÓN EN NUESTRO SISTEMA)](#-usando-apt-instalación-en-nuestro-sistema)
       - [BAJANDO EL .TAR.GZ - LA MÁS SENCILLA](#bajando-el-targz---la-más-sencilla)
       - [DOCKER](#docker)
 
@@ -70,7 +70,7 @@ Procederemos a la instalación de uno en concreto ya que el resto se instalan ig
 Vamos a instalar metricbeat, para ello debemos descargarlo del sitio oficial. Hay varias maneras de instalarlo:
 
 
-#### USANDO `apt` (INSTALACIÓN EN NUESTRO SISTEMA)
+#### * USANDO `apt` (INSTALACIÓN EN NUESTRO SISTEMA)
 
 
 source : https://www.elastic.co/guide/en/beats/metricbeat/8.1/setup-repositories.html#_apt
